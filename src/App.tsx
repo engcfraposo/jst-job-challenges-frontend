@@ -1,25 +1,22 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Reset, FullScreen, Centered, Gradient } from './styles';
+import Menu from './components/Menu';
+import Stats from './pages/Stats';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Reset />
+      <FullScreen>
+        <Menu />
+        <Centered>
+          <Stats />
+        </Centered>
+        <Gradient />
+      </FullScreen>
+    </>
   );
 }
 
