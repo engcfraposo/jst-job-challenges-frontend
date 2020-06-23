@@ -28,6 +28,8 @@ const Stats: React.FC = () => {
     CSS: number;
   }
 
+  const techs = ['CSS', 'HTML', 'JavaScript', 'PHP', 'TypeScript'];
+
   const [selectedRepository, setSelectedRepository] = useState<string>('0');
   const [login, setLogin] = useState<string>('');
   const [repositories, setRepositories] = useState<GITHUBResponse[]>([]);
@@ -91,39 +93,9 @@ const Stats: React.FC = () => {
         ))}
       </RepositoryList>
 
-      {stats.CSS ? (
-        <h1>
-          CSS:
-          {stats.CSS}
-        </h1>
-      ) : (
-        <h1>CSS:0</h1>
-      )}
-      {stats.HTML ? (
-        <h1>
-          HTML:
-          {stats.HTML}
-        </h1>
-      ) : (
-        <h1>HTML:0</h1>
-      )}
-      {stats.JavaScript ? (
-        <h1>
-          JavaScript:
-          {stats.JavaScript}
-        </h1>
-      ) : (
-        <h1>JavaScript:0</h1>
-      )}
-      {stats.TypeScript ? (
-        <h1>
-          TypeScript:
-          {stats.TypeScript}
-        </h1>
-      ) : (
-        <h1>TypeScript:0</h1>
-      )}
-
+      {Object.keys(stats).map((item) => (
+        <h1>{item}:</h1>
+      ))}
       <Content />
     </>
   );
