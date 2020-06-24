@@ -6,8 +6,6 @@ export const Header = styled.div`
   display: fixed;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.8);
-  position: relative;
 `;
 
 export const Screen = styled.div`
@@ -29,7 +27,9 @@ export const Item = styled.li`
   display: inline-block;
   color: #004ba8;
   font-weight: 700;
+  font-size: 20px;
   cursor: pointer;
   &:hover {
-    font-weight: 500;
+    color: #ccc;
+  }
 `;
