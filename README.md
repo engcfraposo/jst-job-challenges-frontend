@@ -1,4 +1,4 @@
-div align="center" style="margin-bottom: 20px;">
+<div align="center" style="margin-bottom: 20px;">
 <img alt="jst-job-challenges-frontend" src="./img/logo.png" width="auto" heigth="auto"/>
 </div>
 
@@ -27,7 +27,7 @@ O Análise de Portifólio do Github é um projeto em formato de DashBoard que te
 ## :fire: Prévia da Aplicação
 
 <div align="center">
-<img src="./img/dashboard.png" alt="preview"/>
+<img src="./img/dashboard.gif" alt="preview"/>
 </div>
 
 ### :rocket: Tecnologias Usadas
