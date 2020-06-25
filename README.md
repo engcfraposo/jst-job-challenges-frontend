@@ -15,7 +15,10 @@
   <a href="#rocket-tecnologias-usadas"> :rocket: Tecnologias Usadas</a> |
   <a href="#hammer-deploy-da-aplicação"> :hammer: Deploy da Aplicação</a> |
   <a href="#thinking-como-contribuir?"> :thinking: Como Contribuir?</a> |
-  <a href="#zap-executando-o-projeto"> :zap: Executando o Projeto </a>
+  <a href="#zap-executando-o-projeto"> :zap: Executando o Projeto </a> |
+   <a href="https://github.com/Rocketseat/bootcamp-gostack-desafios/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafios?style=social">
+  </a>
 </p>
 
 </div>
