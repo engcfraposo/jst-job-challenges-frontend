@@ -27,7 +27,7 @@ O Análise de Portifólio do Github é um projeto em formato de DashBoard que te
 ## :fire: Prévia da Aplicação
 
 <div align="center">
-<img src="https://media.giphy.com/media/Lm6bmg75wR7Llcf9JG/giphy.gif" alt="preview"/>
+<img src="./img/dashboard.png" alt="preview"/>
 </div>
 
 ### :rocket: Tecnologias Usadas
