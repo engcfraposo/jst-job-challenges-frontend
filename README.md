@@ -8,6 +8,9 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/engcfraposo/jst-job-challenges-frontend?color=green&style=flat-square)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/30e0ef7a3c2146498723e53c9fcaeda7)](https://www.codacy.com/manual/engcfraposo/jst-job-challenges-frontend_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=engcfraposo/jst-job-challenges-frontend&amp;utm_campaign=Badge_Grade)
 ![GitHub top language](https://img.shields.io/github/languages/top/engcfraposo/jst-job-challenges-frontend?style=flat-square)
+<a href="https://github.com/engcfraposo/jst-job-challenges-frontend/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/engcfraposo/jst-job-challenges-frontend?style=social">
+  </a>
 
 
 <p align="center" >
@@ -16,9 +19,6 @@
   <a href="#hammer-deploy-da-aplicação"> :hammer: Deploy da Aplicação</a> |
   <a href="#thinking-como-contribuir?"> :thinking: Como Contribuir?</a> |
   <a href="#zap-executando-o-projeto"> :zap: Executando o Projeto </a> |
-   <a href="https://github.com/Rocketseat/bootcamp-gostack-desafios/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafios?style=social">
-  </a>
 </p>
 
 </div>
