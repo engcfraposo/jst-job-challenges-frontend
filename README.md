@@ -41,7 +41,6 @@ O projeto foi feito com as seguintes tecnologias:
 
 ## :hammer: Deploy da Aplicação
 
--[Site](https://jst-job-challenges-frontend.netlify.app/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8316b6e0-f98a-4c2b-8bcb-65adf499bf41/deploy-status)](https://app.netlify.com/sites/jst-job-challenges-frontend/deploys)
 
 
