@@ -7,7 +7,7 @@ div align="center" style="margin-bottom: 20px;">
 [![The MIT License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](http://github.com/jvictorfarias/jst-job-challenges-frontend/LICENSE.md)
 ![GitHub last commit](https://img.shields.io/github/last-commit/engcfraposo/jst-job-challenges-frontend?color=green&style=flat-square)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/30e0ef7a3c2146498723e53c9fcaeda7)](https://www.codacy.com/manual/engcfraposo/jst-job-challenges-frontend_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=engcfraposo/jst-job-challenges-frontend&amp;utm_campaign=Badge_Grade)
-![GitHub top language](https://img.shields.io/github/languages/top/jvictorfarias/jst-job-challenges-frontend?style=flat-square)
+![GitHub top language](https://img.shields.io/github/languages/top/engcfraposo/jst-job-challenges-frontend?style=flat-square)
 
 
 <p align="center" >
@@ -27,7 +27,7 @@ O Análise de Portifólio do Github é um projeto em formato de DashBoard que te
 ## :fire: Prévia da Aplicação
 
 <div align="center">
-<img src="https://media.giphy.com/media/Lm6bmg75wR7Llcf9JG/giphy.gif" alt="preview"/>
+<img src="./img/dashboard.png" alt="preview"/>
 </div>
 
 ### :rocket: Tecnologias Usadas
@@ -41,7 +41,6 @@ O projeto foi feito com as seguintes tecnologias:
 
 ## :hammer: Deploy da Aplicação
 
--[Site](https://jst-job-challenges-frontend.netlify.app/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8316b6e0-f98a-4c2b-8bcb-65adf499bf41/deploy-status)](https://app.netlify.com/sites/jst-job-challenges-frontend/deploys)
 
 
@@ -80,4 +79,4 @@ $ npm start
 
 Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.
 
-<p align="center" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">Feito com :purple_heart: by <strong> Joao Victor Farias</strong> </p>
+<p align="center" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">Feito com :purple_heart: by <strong> Cláudio Filipe Lima Rapôso</strong> </p>
