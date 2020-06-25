@@ -25,7 +25,7 @@ const About: React.FC = () => {
               O Análise de Portifólio do Github é um projeto em formato de
               DashBoard que tem como finalidade evidênciar aspectos
               quantitativos de produtividade em programação dos respectivos
-              respositórios.
+              respositórios. 
             </AboutText>
             <AboutTitle>
               MIT License - Direitos autorais (c) 2020 engcfraposo
