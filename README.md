@@ -25,7 +25,7 @@
 
 ## :barber: O projeto
 
-O Análise de Portifólio do Github é um projeto em formato de DashBoard que tem como finalidade evidênciar aspectos quantitativos de produtividade em programação dos respectivos respositórios.
+O Análise de Portifólio do Github é um projeto em formato de DashBoard que tem como finalidade evidenciar aspectos quantitativos de produtividade em programação dos respectivos respositórios.
 
 ## :fire: Prévia da Aplicação
 
