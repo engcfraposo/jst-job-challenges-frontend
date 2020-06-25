@@ -153,7 +153,7 @@ const Stats: React.FC = () => {
             )}
           </RepositoryList>
         </Form>
-        {selectedRepository !== '1' ? (
+        {selectedRepository !== '0' ? (
           <UpperDashboardContainer>
             <UserComponent user={user} />
             <LanguagesComponent data={data} />
@@ -161,7 +161,7 @@ const Stats: React.FC = () => {
         ) : (
           <div />
         )}
-        {selectedRepository !== '1' ? (
+        {selectedRepository !== '0' ? (
           <LowerDashboardContainer>
             <BarChartComponent data={data} />
             <RadarChartComponent data={data} />
