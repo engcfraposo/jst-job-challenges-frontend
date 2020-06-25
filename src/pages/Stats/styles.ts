@@ -75,11 +75,23 @@ export const NoContent = styled.img`
   width: 220px;
 `;
 
-export const DashboardContainer = styled.div`
+export const UpperDashboardContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  overflow: hidden;
+  width: 1200px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+export const LowerDashboardContainer = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 10px;
   width: 1200px;
   @media (max-width: 768px) {
@@ -90,6 +102,9 @@ export const DashboardContainer = styled.div`
 export const Title = styled.h1`
   color: #ffbe55;
   font-family: Roboto, Arial, Helvetica, sans-serif;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const RepositoryList = styled.select`

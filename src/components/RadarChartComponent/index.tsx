@@ -7,6 +7,7 @@ import {
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
+  ResponsiveContainer,
 } from 'recharts';
 
 import { RadarChartContainer } from './styles';
@@ -21,19 +22,19 @@ const RadarChartComponent: React.FC<DataProps> = (props) => {
   return (
     <>
       <RadarChartContainer>
-        <RadarChart
-          cx={150}
-          cy={150}
-          outerRadius={70}
-          width={350}
-          height={350}
-          data={data}
-        >
-          <PolarGrid />
-          <PolarAngleAxis dataKey="name" stroke="#ffbe55" />
-          <PolarRadiusAxis />
-          <Radar dataKey="value" stroke="#fff" fill="#fff" fillOpacity={0.6} />
-        </RadarChart>
+        <ResponsiveContainer>
+          <RadarChart outerRadius={100} data={data}>
+            <PolarGrid />
+            <PolarAngleAxis dataKey="name" stroke="#ffbe55" />
+            <PolarRadiusAxis />
+            <Radar
+              dataKey="value"
+              stroke="#fff"
+              fill="#fff"
+              fillOpacity={0.6}
+            />
+          </RadarChart>
+        </ResponsiveContainer>
       </RadarChartContainer>
     </>
   );

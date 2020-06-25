@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const UserBox = styled.div`
   align-items: center;
-  border: 2px solid #fff;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -10,6 +9,7 @@ export const UserBox = styled.div`
   justify-content: center;
   width: 400px;
   @media (max-width: 768px) {
+    border: 2px solid #fff;
     margin-top: 10px;
     width: 300px;
   }

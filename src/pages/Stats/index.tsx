@@ -18,7 +18,8 @@ import {
   SearchIcon,
   RepositoryList,
   RepositoryOption,
-  DashboardContainer,
+  UpperDashboardContainer,
+  LowerDashboardContainer,
 } from './styles';
 import search from '../../assets/search.svg';
 import background from '../../assets/background.svg';
@@ -152,19 +153,19 @@ const Stats: React.FC = () => {
             )}
           </RepositoryList>
         </Form>
-        {selectedRepository !== '0' ? (
-          <DashboardContainer>
+        {selectedRepository !== '1' ? (
+          <UpperDashboardContainer>
             <UserComponent user={user} />
             <LanguagesComponent data={data} />
-          </DashboardContainer>
+          </UpperDashboardContainer>
         ) : (
           <div />
         )}
-        {selectedRepository !== '0' ? (
-          <DashboardContainer>
+        {selectedRepository !== '1' ? (
+          <LowerDashboardContainer>
             <BarChartComponent data={data} />
             <RadarChartComponent data={data} />
-          </DashboardContainer>
+          </LowerDashboardContainer>
         ) : (
           <div />
         )}

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const LanguagesBox = styled.div`
   align-items: center;
-  border: 2px solid #fff;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -11,6 +10,7 @@ export const LanguagesBox = styled.div`
   width: 250px;
   @media (max-width: 768px) {
     margin-top: 10px;
+    border: 2px solid #fff;
     width: 300px;
   }
 `;

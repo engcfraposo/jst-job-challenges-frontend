@@ -24,6 +24,8 @@ const BarChartComponent: React.FC<DataProps> = (props) => {
       <BarChartContainer>
         <ResponsiveContainer>
           <BarChart
+            height={160}
+            width={100}
             data={data}
             margin={{
               top: 5,
@@ -31,7 +33,7 @@ const BarChartComponent: React.FC<DataProps> = (props) => {
               left: 20,
               bottom: 5,
             }}
-            barSize={40}
+            barSize={10}
           >
             <XAxis
               dataKey="name"
@@ -40,7 +42,7 @@ const BarChartComponent: React.FC<DataProps> = (props) => {
               stroke="#ffbe55"
             />
             <YAxis stroke="#FFF" />
-            <CartesianGrid strokeDasharray="3 3" stroke="#FFF" />
+            <CartesianGrid strokeDasharray="2 2" stroke="#FFF" />
             <Bar dataKey="value" fill="#FFF" />
           </BarChart>
         </ResponsiveContainer>

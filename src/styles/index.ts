@@ -5,11 +5,13 @@ export const Reset = createGlobalStyle`
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-
-
   }
   input, textarea, select, button {
     outline: 0;
+  }
+
+  div {
+    overflow: hidden;
   }
 
   body{
@@ -19,7 +21,7 @@ export const Reset = createGlobalStyle`
       font-size: 16;
 
       @media (max-width: 768px) {
-        font-size: 12
+        font-size: 12;
       };
   }
 `;

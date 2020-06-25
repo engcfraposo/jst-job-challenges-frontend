@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 export const RadarChartContainer = styled.div`
-  height: 100%;
+  align-items: center;
+  height: 300px;
+  justify-content: center;
   padding-top: 10px;
-  width: 450px;
-
+  width: 500px;
   @media (max-width: 768px) {
-    height: 300px;
-    width: 300px;
-    border: 2px solid #fff;
-    border-radius: 5px;
+    height: 400px;
+    width: 400px;
     margin-top: 10px;
   }
 `;
