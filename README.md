@@ -4,7 +4,7 @@
 
 <div align="center" style="margin: 20px;">
 
-[![The MIT License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](http://github.com/jvictorfarias/jst-job-challenges-frontend/LICENSE.md)
+[![The MIT License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](http://github.com/jvictorfarias/engcfraposo/jst-job-challenges-frontend/LICENSE.md)
 ![GitHub last commit](https://img.shields.io/github/last-commit/engcfraposo/jst-job-challenges-frontend?color=green&style=flat-square)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/30e0ef7a3c2146498723e53c9fcaeda7)](https://www.codacy.com/manual/engcfraposo/jst-job-challenges-frontend_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=engcfraposo/jst-job-challenges-frontend&amp;utm_campaign=Badge_Grade)
 ![GitHub top language](https://img.shields.io/github/languages/top/engcfraposo/jst-job-challenges-frontend?style=flat-square)
