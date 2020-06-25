@@ -1,160 +1,121 @@
 import styled from 'styled-components';
 
-export const Form = styled.form`
+export const Content = styled.div`
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 20px;
   position: relative;
+`;
+
+export const Form = styled.form`
   align-items: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
 `;
 
 export const Avatar = styled.img`
-  height: 90px;
-  width: 90px;
   border: 2px solid #fff;
   border-radius: 50%;
+  height: 90px;
+  width: 90px;
 `;
 
-export const ContainerRow = styled.form`
+export const SearchContainer = styled.div`
+  align-items: center;
   display: flex;
-  margin-top: 10px;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const ContainerColumn = styled.form`
-  display: flex;
-  width: 450px;
-  margin-top: 20px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  margin-top: 10px;
 `;
 
 export const Search = styled.input`
-  height: 3vh;
-  width: 20vw;
+  background: #004ba8;
   border: 2px solid #fff;
   border-radius: 50px;
+  color: #fff;
   font-size: 15px;
   font-weight: bold;
+  height: 25px;
   padding: 0 30px 0 12px;
-  color: #fff;
-  background: #004ba8;
+  width: 190px;
   ::-webkit-input-placeholder {
     color: #fff;
   }
-`;
-
-export const IconButton = styled.button`
-    height: 30px;
-    width: 30px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    background: #004ba8;
-    cursor: pointer;
-    &:hover {
-    background: #ccc;
-  }
+  &:hover {
+    background: #ffbe55;
+    color: #004ba8;
   }
 `;
 
-export const Icon = styled.img`
-    height: 15px;
-    width: 15px;
+export const SearchIconButton = styled.button`
+  background: #004ba8;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  &:hover {
+    background: #ffbe55;
+  }
+`;
+
+export const SearchIcon = styled.img`
+  height: 15px;
+  width: 15px;
+`;
+
+export const NoContent = styled.img`
+  height: 100%;
+  margin-top: 10px;
+  width: 220px;
+`;
+
+export const DashboardContainer = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+  width: 1200px;
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 
 export const Title = styled.h1`
+  color: #ffbe55;
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  color: #fff;
-`;
-
-export const Content = styled.div`
-  display: absolute;
-  margin-top: 20px;
-  background: #fff;
 `;
 
 export const RepositoryList = styled.select`
-  margin-top: 5px;
-  height: 3vh;
-  width: 20vw;
+  background: #004ba8;
   border: 2px solid #fff;
   border-radius: 50px;
+  color: #fff;
   font-size: 15px;
   font-weight: bold;
+  height: 25px;
+  margin-top: 5px;
   padding: 0 30px 0 12px;
-  color: #fff;
-  background: #004ba8;
+  width: 260px;
   ::-webkit-input-placeholder {
     color: #fff;
   }
+  &:hover {
+    background: #ffbe55;
+    color: #004ba8;
+    :-webkit-input-placeholder {
+      color: #004ba8;
+    }
+  }
 `;
 
-export const RepositoryOption = styled.option``;
-
-export const LanguagesBox = styled.div`
-  height: 140px;
-  width: 250px;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content:center
-  border-radius: 10px;
-  background: linear-gradient(to right, #004ba8, #3e78b2);
-`;
-
-export const LanguagesText = styled.h3`
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+export const RepositoryOption = styled.option`
+  background: #004ba8;
   color: #fff;
-  margin-top: 5px;
-  font-size: 10px;
-`;
-
-export const LanguagesTitle = styled.h2`
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  color: #fff;
-  margin: 5px auto;
-  font-size: 16px;
-`;
-
-export const UserBox = styled.div`
-  height: 140px;
-  width: 400px;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px;
-  justify-content:space-between
-  border-radius: 10px;
-  background: linear-gradient(to right, #004ba8, #3e78b2);
-`;
-
-export const UserText = styled.h3`
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  color: #fff;
-  margin-top: 5px;
-  font-size: 10px;
-`;
-
-export const UserTitle = styled.h2`
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-`;
-export const UserLink = styled.a`
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  color: #fff;
-  margin-top: 5px;
-  font-size: 12px;
-  text-align: center;
-  text-decoration: none;
 `;

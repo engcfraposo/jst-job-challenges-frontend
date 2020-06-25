@@ -1,67 +1,55 @@
 /* eslint-disable camelcase */
 /* eslint-disable react/jsx-one-expression-per-line */
-import React, { useState, FormEvent, useEffect } from 'react';
+import React, { useState, FormEvent, useEffect, useMemo } from 'react';
 import axios from 'axios';
+import UserComponent from '../../components/UserComponent';
+import RadarChartComponent from '../../components/RadarChartComponent';
+import BarChartComponent from '../../components/BarChartComponent';
+import LanguagesComponent from '../../components/LanguagesComponent';
 import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Radar,
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-} from 'recharts';
-import {
+  Content,
   Avatar,
   Form,
   Title,
+  SearchContainer,
   Search,
-  IconButton,
-  Icon,
+  NoContent,
+  SearchIconButton,
+  SearchIcon,
   RepositoryList,
   RepositoryOption,
-  ContainerRow,
-  ContainerColumn,
-  UserBox,
-  UserText,
-  UserTitle,
-  UserLink,
-  LanguagesBox,
-  LanguagesText,
-  LanguagesTitle,
+  DashboardContainer,
 } from './styles';
-import logo from '../../assets/search.svg';
+import search from '../../assets/search.svg';
+import background from '../../assets/background.svg';
+
+interface GITHUBLogin {
+  id: number;
+  name: string;
+}
+
+interface GITHUBUser {
+  id: number;
+  login: string;
+  avatar_url: string;
+  bio: string;
+  html_url: string;
+}
+
+interface Language {
+  JavaScript: number;
+  TypeScript: number;
+  PHP: number;
+  HTML: number;
+  CSS: number;
+}
+
+interface Data {
+  name: string;
+  value: number;
+}
 
 const Stats: React.FC = () => {
-  interface GITHUBLogin {
-    id: number;
-    name: string;
-  }
-
-  interface GITHUBUser {
-    id: number;
-    login: string;
-    avatar_url: string;
-    bio: string;
-    html_url: string;
-  }
-
-  interface Language {
-    JavaScript: number;
-    TypeScript: number;
-    PHP: number;
-    HTML: number;
-    CSS: number;
-  }
-
-  interface Data {
-    name: string;
-    value: number;
-  }
-
   const [selectedRepository, setSelectedRepository] = useState<string>('0');
   const [login, setLogin] = useState<string>('');
   const [repositories, setRepositories] = useState<GITHUBLogin[]>([]);
@@ -86,7 +74,7 @@ const Stats: React.FC = () => {
     },
   ]);
 
-  // acesso a API de linguages do GitHub
+  // Acesso a API de linguagem do GitHub
   useEffect(() => {
     if (selectedRepository === '0') {
       return;
@@ -97,7 +85,7 @@ const Stats: React.FC = () => {
       )
       .then((response) => setStats(response.data));
   }, [login, selectedRepository]);
-
+  // Transformação de API de linguagem do GitHub
   useEffect(() => {
     const datas = Object.entries(stats).map(([name, value]) => {
       return { name, value };
@@ -121,120 +109,66 @@ const Stats: React.FC = () => {
 
   return (
     <>
-      <Form onSubmit={handleLogin}>
-        {selectedRepository !== '0' ? (
-          <Avatar src={user.avatar_url} />
-        ) : (
-          <div />
-        )}
-        <Title>Análise de Portifólio do Github</Title>
-        <ContainerRow>
-          <Search
-            type="text"
-            name="user"
-            id="user"
-            value={login}
-            onChange={(e) => setLogin(e.target.value)}
-            placeholder="Coloque seu Username"
-          />
+      <Content>
+        <Form onSubmit={handleLogin}>
+          {selectedRepository !== '0' ? (
+            <Avatar src={user.avatar_url} />
+          ) : (
+            <NoContent src={background} />
+          )}
+          <Title>Análise de Portifólio do Github</Title>
+          <SearchContainer>
+            <Search
+              type="text"
+              name="user"
+              id="user"
+              value={login}
+              onChange={(e) => setLogin(e.target.value)}
+              placeholder="Coloque seu Username"
+            />
 
-          <IconButton type="submit">
-            <Icon src={logo} />
-          </IconButton>
-        </ContainerRow>
-        <RepositoryList
-          name="repository"
-          id="repository"
-          value={selectedRepository}
-          onChange={(e) => setSelectedRepository(e.target.value)}
-        >
-          <RepositoryOption value="0">Selecione o Repositório</RepositoryOption>
-
-          {repositories.map((repository) => (
-            <RepositoryOption key={repository.id} value={repository.name}>
-              {repository.name}
+            <SearchIconButton type="submit">
+              <SearchIcon src={search} alt="search" />
+            </SearchIconButton>
+          </SearchContainer>
+          <RepositoryList
+            name="repository"
+            id="repository"
+            value={selectedRepository}
+            onChange={(e) => setSelectedRepository(e.target.value)}
+          >
+            <RepositoryOption value="0" data-testid="repository-option">
+              Selecione o Repositório
             </RepositoryOption>
-          ))}
-        </RepositoryList>
-      </Form>
-      {selectedRepository !== '0' ? (
-        <ContainerRow>
-          <ContainerColumn>
-            <UserBox>
-              <UserTitle>{user.login}</UserTitle>
-              <UserText>{user.bio}</UserText>
-              <UserLink href={user.html_url}>{user.html_url}</UserLink>
-            </UserBox>
-          </ContainerColumn>
-          <ContainerColumn>
-            <LanguagesBox>
-              <LanguagesTitle>Linguagens:</LanguagesTitle>
-              {Object.entries(stats).map(([name, value]) => (
-                <LanguagesText key={name}>
-                  {name}: {value} palavras
-                </LanguagesText>
-              ))}
-            </LanguagesBox>
-          </ContainerColumn>
-        </ContainerRow>
-      ) : (
-        <div />
-      )}
-      <ContainerRow>
+
+            {useMemo(
+              () =>
+                repositories.map((repository) => (
+                  <RepositoryOption key={repository.id} value={repository.name}>
+                    {repository.name}
+                  </RepositoryOption>
+                )),
+              [repositories],
+            )}
+          </RepositoryList>
+        </Form>
         {selectedRepository !== '0' ? (
-          <ContainerColumn>
-            <BarChart
-              width={500}
-              height={150}
-              data={data}
-              margin={{
-                top: 5,
-                right: 30,
-                left: 20,
-                bottom: 5,
-              }}
-              barSize={40}
-            >
-              <XAxis
-                dataKey="name"
-                scale="auto"
-                padding={{ left: 0, right: 0 }}
-                stroke="#FFF"
-              />
-              <YAxis stroke="#FFF" />
-              <CartesianGrid strokeDasharray="3 3" stroke="#FFF" />
-              <Bar dataKey="value" fill="#FFF" />
-            </BarChart>
-          </ContainerColumn>
+          <DashboardContainer>
+            <UserComponent user={user} />
+            <LanguagesComponent data={data} />
+          </DashboardContainer>
         ) : (
           <div />
         )}
         {selectedRepository !== '0' ? (
-          <ContainerColumn>
-            <RadarChart
-              cx={150}
-              cy={150}
-              outerRadius={100}
-              width={350}
-              height={250}
-              data={data}
-            >
-              <PolarGrid />
-              <PolarAngleAxis dataKey="name" stroke="#FFF" />
-              <PolarRadiusAxis />
-              <Radar
-                name="Mike"
-                dataKey="value"
-                stroke="fff"
-                fill="#fff"
-                fillOpacity={0.6}
-              />
-            </RadarChart>
-          </ContainerColumn>
+          <DashboardContainer>
+            <BarChartComponent data={data} />
+            <RadarChartComponent data={data} />
+          </DashboardContainer>
         ) : (
           <div />
         )}
-      </ContainerRow>
+      </Content>
     </>
   );
 };

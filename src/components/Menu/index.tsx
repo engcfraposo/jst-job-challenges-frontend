@@ -1,16 +1,24 @@
 import React from 'react';
-import { Screen, Logo, List, Item, Header } from './styles';
+
+import { Screen, List, Item, Header, RouterLink } from './styles';
 
 const Menu: React.FC = () => {
   return (
     <>
       <Header>
         <Screen>
-          <Logo src="https://www.justa.com.vc/images/logo_azul1.png" alt="" />
           <List>
-            <Item>Home</Item>
-            <Item>Sobre</Item>
-            <Item>Contato</Item>
+            <RouterLink to="/">
+              <Item>Home</Item>
+            </RouterLink>
+
+            <RouterLink to="/about">
+              <Item>Sobre</Item>
+            </RouterLink>
+
+            <RouterLink to="/contact">
+              <Item>Contato</Item>
+            </RouterLink>
           </List>
         </Screen>
       </Header>
