@@ -61,10 +61,10 @@ export const ContactTitle = styled.h2`
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 18px;
   margin-top: 20px;
+  overflow-y: hidden;
   text-align: center;
   @media (max-width: 768px) {
     font-size: 16px;
-    overflow-y: hidden;
     margin-top: 14px;
   }
 `;
