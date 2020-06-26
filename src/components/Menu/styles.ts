@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Header = styled.div`
   align-items: center;
-  background: #fff;
+  background: #ffbe55;
   border: 1px solid #ccc;
   display: fixed;
   height: 10vh;
@@ -43,6 +43,6 @@ export const RouterLink = styled(Link)`
   margin-right: 20px;
   text-decoration: none;
   &:hover {
-    color: #ffbe55;
+    color: #fff;
   }
 `;
