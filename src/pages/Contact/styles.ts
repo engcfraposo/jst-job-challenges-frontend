@@ -34,6 +34,9 @@ export const ContactBox = styled.form`
   justify-content: center;
   margin-top: 20px;
   width: 45vw;
+  @media (max-width: 768px) {
+    width: 320px;
+  }
 `;
 
 export const Image = styled.img`
@@ -59,6 +62,11 @@ export const ContactTitle = styled.h2`
   font-size: 18px;
   margin-top: 20px;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    overflow-y: hidden;
+    margin-top: 14px;
+  }
 `;
 
 export const ContactImput = styled.input`
@@ -83,7 +91,7 @@ export const ContactImput = styled.input`
     }
   }
   @media (max-width: 768px) {
-    width: 240px;
+    width: 200px;
   }
 `;
 
@@ -109,7 +117,7 @@ export const ContactTextArea = styled.textarea`
     }
   }
   @media (max-width: 768px) {
-    width: 240px;
+    width: 180px;
   }
 `;
 
@@ -122,6 +130,7 @@ export const ContactButton = styled.button`
   font-weight: bold;
   height: 3vh;
   margin-top: 20px;
+  overflow-y: hidden;
   padding: 0 30px 0 12px;
   width: 20vw;
   ::-webkit-input-placeholder {

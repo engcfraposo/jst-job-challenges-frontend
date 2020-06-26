@@ -63,6 +63,9 @@ export const AboutTitle = styled.h2`
   font-size: 16px;
   margin-top: 20px;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 export const AboutLink = styled.a`
   color: #fff;
