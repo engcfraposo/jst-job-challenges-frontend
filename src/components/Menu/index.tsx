@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { Screen, List, Item, Header, RouterLink } from './styles';
 
-const Menu: React.FC = () => {
+const Menu: FunctionComponent = () => {
   return (
     <>
       <Header>

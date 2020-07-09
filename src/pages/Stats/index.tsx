@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 /* eslint-disable react/jsx-one-expression-per-line */
-import React, { useState, FormEvent, useEffect, useMemo } from 'react';
+import React, { useState, FormEvent, useEffect } from 'react';
 import axios from 'axios';
 import UserComponent from '../../components/UserComponent';
 import RadarChartComponent from '../../components/RadarChartComponent';
@@ -98,6 +98,7 @@ const Stats: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   async function handleLogin(event: FormEvent) {
     event.preventDefault();
+
     const users = await axios.get<GITHUBUser>(
       `https://api.github.com/users/${login}`,
     );
@@ -142,15 +143,11 @@ const Stats: React.FC = () => {
               Selecione o Repositório
             </RepositoryOption>
 
-            {useMemo(
-              () =>
-                repositories.map((repository) => (
-                  <RepositoryOption key={repository.id} value={repository.name}>
-                    {repository.name}
-                  </RepositoryOption>
-                )),
-              [repositories],
-            )}
+            {repositories.map((repository) => (
+              <RepositoryOption key={repository.id} value={repository.name}>
+                {repository.name}
+              </RepositoryOption>
+            ))}
           </RepositoryList>
         </Form>
         {selectedRepository !== '0' ? (

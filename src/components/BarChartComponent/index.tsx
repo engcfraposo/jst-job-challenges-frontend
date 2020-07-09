@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import {
   BarChart,
@@ -16,7 +16,7 @@ interface DataProps {
   data: Array<{ name: string; value: number }>;
 }
 
-const BarChartComponent: React.FC<DataProps> = (props) => {
+const BarChartComponent: FunctionComponent<DataProps> = (props) => {
   const { data } = props;
 
   return (

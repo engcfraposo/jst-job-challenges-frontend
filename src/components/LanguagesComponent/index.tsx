@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { LanguagesBox, LanguagesText, LanguagesTitle } from './styles';
 
@@ -8,7 +8,7 @@ interface DataProps {
   data: Array<{ name: string; value: number }>;
 }
 
-const RadarChartComponent: React.FC<DataProps> = (props) => {
+const RadarChartComponent: FunctionComponent<DataProps> = (props) => {
   const { data } = props;
 
   return (

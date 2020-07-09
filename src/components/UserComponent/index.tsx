@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { UserBox, UserTitle, UserText, UserLink } from './styles';
 
@@ -14,7 +14,7 @@ interface UserProps {
   };
 }
 
-const UserComponent: React.FC<UserProps> = ({ user }) => {
+const UserComponent: FunctionComponent<UserProps> = ({ user }) => {
   return (
     <>
       <UserBox>
